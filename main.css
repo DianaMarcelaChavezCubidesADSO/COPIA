@@ -6,7 +6,7 @@
 
 :root{
   --header:90px;
-  --color-primary:#812181;
+  --color-primary: #812181;
 }
 
 body{
@@ -17,6 +17,9 @@ body{
 
 .bg-black{
   background-color: #000;
+}
+.gris{
+  background-color: #e2e2e2;
 }
 
 .contenedor{
@@ -180,16 +183,19 @@ body{
 ---------EXPLORE----------------
 -------------------------------**/
 
+.total{
+  height: 100vh;
+}
+
 .explore{
-
+ 
+  
   display: grid;
-  /*gap: 3rem;*/
-  background-color: #dacdcd;
-
+  
   
   grid-template:
-  "uno dos tres " 300px 
-  "cuatro dos sexto" 300px 
+  "uno dos tres " 380px 
+  "cuatro dos sexto" 380px 
   "septimo octavo noveno" 150px/  auto auto auto;
 
 }
@@ -199,157 +205,207 @@ display: flex;
   align-items: end;
   justify-content: center;
   font-size: 32px;
-  gap: 3rem;
-    text-transform: capitalize  ;/*colocar la letra en mayuscula la primera*/
+  text-transform: capitalize;
+  
 }
 
 
 .uno{
   grid-area: uno;
+  
 
 
 }
 .dos{
   grid-area: dos;
-  
+ 
 }
+
 .imagen{
-  width: 400px;
+  width: 600px;
 }
 .grafico{
- display: flex;
+   display: flex;
 
   align-items: center;
 
-  flex-direction: column;
   justify-content: center;
-  gap: 4rem;
+
+  flex-direction: column;
+
+  gap: 3rem;
+  
+}
+
+.flecha{
+  background-color: transparent;
+  border: none;
+  font-size: 42px;
+  
 }
 
 .tres{
   grid-area: tres;
   
 }
+
+
 .cuatro{
   grid-area: cuatro;
-
   
   
 }
+
 .text_medio{
 rotate: -90deg;
-   display: flex;
-  justify-content: center;
+  display: flex;
+  justify-content: center ;
   align-items: start;
-  font-size:28px;
+
+  font-size: 28px;
   font-weight: 800;
 }
 
+
 .cinco{
   grid-area: dos;
-
-  display: n;
-
-  background-color: none;
 }
 
 .sexto{
   grid-area: sexto;
   rotate: 90deg; 
- /* display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;*/
-
 }
 
 
 .septimo{
-
   grid-area: septimo;
   display: flex;
   justify-content: start;
   padding: 0px 30px;
   font-size: 28px;
-  font-weight: 800px;
-   padding-bottom: 40px;
+  font-weight: 800;
+  padding-bottom: 40px;
 
-
-  
 }
 
 .octavo{
-
   grid-area: octavo;
-  
 }
 
 .noveno{
-
   grid-area: noveno;
   display: flex;
-  justify-content:end;
+  justify-content: end;
   padding: 0px 30px;
-
   font-size: 28px;
-  gap: 14rem;
-  font-weight: 800px;
+  font-weight: 800;
   padding-bottom: 40px;
-
- 
-}
-.btton_flecha{
-  background-color: transparent;
-  border: none;
-  font-size: 42px;
 }
 
-.seccion_explore{
-background-color: #dacdcd;
 
-}
-.seccion_total{
-  height: 100vh;
-}
-/**------------------------------
----------cards----------------
--------------------------------**/
-.contenedor_cards{
+/**----------------------------------------------
+-------------------CARD-------------------------
+------------------------------------------------**/
+
+.contenedor_card{
   display: flex;
   gap: 6rem;
   padding-top: 90px;
   padding-bottom: 90px;
   justify-content: center;
-
 }
-.cards{
+.card{
   display: flex;
   width: 300px;
-  border: solid 1px #dedede;
-  padding: 22px ;
+  border: solid 2px #ffffff;
+  padding: 22px;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   border-radius: 50px;
-  box-shadow: 0 0px 11px 0px#d9d9d9 ;
+  box-shadow: 0 0px 10px 0px #d9d9d9;
   background-color: #ebebeb;
-
+  
 }
-.cards_title{
+
+
+.card__title{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 4px 0;
-
-
-
 }
-.cards_text{
+
+.card__text{
 text-align: center;
+}
+
+
+
+.card--border{
+  border: solid 2px var(--color-primary);
+}
+
+
+/**-----------------------------------------------------
+-------------------TRABAJO------------------------------
+-----------------------------------------------------**/
+
+
+.contenedor_work{
+display: grid;
+grid-template: 
+  "texto centrado imagen" 100px
+  "texto centrado imagen"300px
+  "texto centrado imagen" 180px /200px 400px 800px;
+background-color: #812181;
+grid-template-columns: auto;
+}
+.work_text {
+ grid-area: texto;
+  
+}
+
+
+.work_centro {
+  grid-area: centrado;
 
 }
-.cards_button{
+
+
+.work_img{
+   grid-area: imagen;
+}
+
+
+/**-----------------------------------------------------
+-------------------negrito------------------------------
+-----------------------------------------------------**/
+.contenedor_negro{
+  display: grid;
+  grid-template: 300px fr1 fr1;
+  margin: auto auto auto ;
+  
 
 }
-.cards--border{
-border: solid 2px var(--color-primary);
-
+.negrito{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+.text{
+  transform: rotate(90deg);
+}
+.dos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo2{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 40px;
+}
+.parafo2{
+  font-size: 30px;
 }
